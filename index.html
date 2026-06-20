@@ -85,7 +85,7 @@
         .toggle-checkbox:checked + .toggle-label { background-color: #04A777; }
     </style>
 </head>
-<body class="pb-24 selection:bg-appex selection:text-white relative text-sm">
+<body class="pb-10 selection:bg-appex selection:text-white relative text-sm">
 
     <!-- FONDOS AMBIENTALES -->
     <div class="fixed inset-0 z-[-1] bg-dark">
@@ -848,11 +848,11 @@
                     <div class="pt-2 space-y-3">
                         <div class="flex justify-between items-center text-xs text-slate-300 font-mono">
                             <span class="flex items-center gap-2"><i class="fa-brands fa-google-play text-emerald_pro"></i> Google Play Console</span>
-                            <span class="text-white font-bold">$25</span>
+                            <span class="text-white font-bold">$25 <span class="text-[9px] text-slate-500 font-sans font-normal">/ único</span></span>
                         </div>
                         <div class="flex justify-between items-center text-xs text-slate-300 font-mono border-b border-white/5 pb-3">
                             <span class="flex items-center gap-2"><i class="fa-brands fa-apple text-emerald_pro text-sm"></i> Apple Developer</span>
-                            <span class="text-white font-bold">$99</span>
+                            <span class="text-white font-bold">$99 <span class="text-[9px] text-slate-500 font-sans font-normal">/ año</span></span>
                         </div>
                     </div>
 
@@ -898,7 +898,7 @@
                             <span class="text-xs text-emerald_pro font-bold block">Plan de Tranquilidad VIP</span>
                             <span class="text-[10px] text-emerald_pro font-mono block mt-0.5">Mantenimiento Base (1 a 5 clínicas) | Cobertura Base 1 App</span>
                             <span class="text-[9px] text-slate-500 font-sans block mt-1 leading-normal italic">
-                                * Reajuste por volumen (<strong class="text-emerald_pro">+$30 USD + I.V.A.</strong> c/5 clínicas extra) y por nuevas aplicaciones (<strong class="text-emerald_pro">+$40 USD + I.V.A.</strong>/App extra).
+                                * Reajuste por volumen (<strong class="text-emerald_pro">+$30 + I.V.A.</strong> c/5 clínicas extra) y por nuevas aplicaciones (<strong class="text-emerald_pro">+$40 + I.V.A.</strong>/App extra).
                             </span>
                         </div>
                         <div class="flex flex-col items-end shrink-0 ml-2">
@@ -917,7 +917,7 @@
                             </div>
                             <div class="flex justify-between text-[10px] text-slate-300 font-mono items-center">
                                 <span>• Cloudflare "Pro" (Recomendado)</span>
-                                <span class="text-emerald_pro font-bold">$20 / mes</span>
+                                <span class="text-white font-bold">$20 / mes</span>
                             </div>
                             <div class="flex justify-between text-[10px] text-slate-300 font-mono items-center">
                                 <span>• Uso Excedente (IA / R2)</span>
@@ -1002,7 +1002,7 @@
                         <strong class="text-white">App MedCore (Front/Back):</strong> Código y arquitectura son propiedad exclusiva del Cliente. Appex asume no-competencia y no podrá duplicarla.
                     </p>
                     <p class="text-slate-400">
-                        <strong class="text-emerald_pro">SaaS APEX Contable:</strong> Propiedad exclusiva de Appex Digital. Se otorga licencia para su subarrendamiento bajo la división fiduciaria acordada <strong class="text-emerald_pro">($35 / $25 + I.V.A.)</strong>.
+                        <strong class="text-emerald_pro">SaaS APPEX Contable:</strong> Propiedad exclusiva de Appex Digital. El derecho de subarrendamiento a terceros se habilita estrictamente mediante el pago activo de la <strong class="text-emerald_pro">Licencia Base ($60 / mes + I.V.A.)</strong>, operando bajo la división fiduciaria acordada <strong class="text-emerald_pro">($35 / $25 + I.V.A.)</strong>.
                     </p>
                 </div>
             </div>
@@ -1047,7 +1047,7 @@
             <div class="glass-card p-6 border-t-2 border-emerald_pro/50 bg-dark hover:border-emerald_pro transition-colors">
                 <i class="fa-solid fa-stopwatch text-emerald_pro text-2xl mb-4 opacity-80"></i>
                 <h3 class="text-sm font-bold text-white mb-2 uppercase tracking-wide">7. SLA de Aceptación (Time-Boxing)</h3>
-                <p class="text-[11px] text-slate-400 leading-relaxed">Notificada la entrega de la Fase 1, el Cliente dispone de <strong class="text-emerald_pro">7 días naturales</strong> para pruebas. Superado este plazo sin reporte de fallos críticos, el sistema se da por 'Aceptado en Producción' y el saldo del 50% ($1,400 USD) se vuelve exigible en un máximo de 48 horas.</p>
+                <p class="text-[11px] text-slate-400 leading-relaxed">Notificada la entrega de la Fase 1, el Cliente dispone de <strong class="text-emerald_pro">7 días naturales</strong> para pruebas. Superado este plazo sin reporte de fallos críticos, el sistema se da por <strong class="text-emerald_pro">'Aceptado en Producción'</strong> y el saldo del 50% (<strong class="text-emerald_pro">$1,400</strong>) se vuelve exigible en un máximo de <strong class="text-emerald_pro">48 horas</strong>.</p>
             </div>
 
             <!-- 8. Plazo de Entrega -->
@@ -1061,7 +1061,7 @@
             <div class="glass-card p-6 border-t-2 border-crimson/50 bg-dark hover:border-crimson transition-colors relative overflow-hidden">
                 <i class="fa-solid fa-ban text-crimson text-2xl mb-4 opacity-80 relative z-10"></i>
                 <h3 class="text-sm font-bold text-white mb-2 uppercase tracking-wide relative z-10">9. Integridad del Alcance (Scope Creep)</h3>
-                <p class="text-[11px] text-slate-400 leading-relaxed relative z-10">Cualquier alteración, adición de módulos o cambio de flujos no especificados en los 5 pilares de la Fase 1, generará un ticket de <strong class="text-crimson">'Feature Request'</strong> cotizado a <strong class="text-crimson">$45 USD/hora + I.V.A.</strong> de ingeniería, pagadero por anticipado.</p>
+                <p class="text-[11px] text-slate-400 leading-relaxed relative z-10">Cualquier alteración, adición de módulos o cambio de flujos no especificados en los 5 pilares de la Fase 1, generará un ticket de <strong class="text-crimson">'Feature Request'</strong> cotizado a <strong class="text-crimson">$45/hora + I.V.A.</strong> de ingeniería, pagadero por anticipado.</p>
             </div>
 
             <!-- 10. Escalabilidad y Futuros Proyectos -->
@@ -1072,15 +1072,15 @@
                 
                 <div class="space-y-4 text-[11px] leading-relaxed text-slate-400 relative z-10 mt-3">
                     <p>
-                        La infraestructura de mantenimiento base (Tier 1) de <strong class="text-white">$60 USD/mes + I.V.A.</strong> ampara la operatividad técnica de <strong class="text-emerald_pro">1 a 5 clínicas</strong> exclusivas para la Fase 1.
+                        La infraestructura de mantenimiento base (Tier 1) de <strong class="text-emerald_pro">$60/mes + I.V.A.</strong> ampara la operatividad técnica de <strong class="text-emerald_pro">1 a 5 clínicas</strong> exclusivas para la Fase 1.
                     </p>
                     
                     <div class="grid md:grid-cols-2 gap-4">
                         <div class="bg-panel p-4 rounded-lg border border-white/5">
                             <strong class="text-white block mb-2 border-b border-white/5 pb-1">Escalabilidad Fase 1 (MedCore):</strong>
                             <ul class="space-y-2">
-                                <li>• <strong class="text-emerald_pro">Crecimiento Horizontal:</strong> Al activarse la clínica n° 6 (y subsecuentemente cada bloque de 5 clínicas adicionales), la tarifa de mantenimiento base se ajustará automáticamente en <strong class="text-emerald_pro">+$30 USD + I.V.A.</strong> mensuales para cubrir el aumento de peticiones de red y soporte.</li>
-                                <li>• <strong class="text-emerald_pro">Crecimiento Vertical:</strong> Cada nueva aplicación o Fase conectada al Cerebro Central sumará <strong class="text-emerald_pro">+$40 USD + I.V.A.</strong> fijos mensuales al mantenimiento base operativo.</li>
+                                <li>• <strong class="text-emerald_pro">Crecimiento Horizontal:</strong> Al activarse la clínica n° 6 (y subsecuentemente cada bloque de 5 clínicas adicionales), la tarifa de mantenimiento base se ajustará automáticamente en <strong class="text-emerald_pro">+$30 + I.V.A.</strong> mensuales para cubrir el aumento de peticiones de red y soporte.</li>
+                                <li>• <strong class="text-emerald_pro">Crecimiento Vertical:</strong> Cada nueva aplicación o Fase conectada al Cerebro Central sumará <strong class="text-emerald_pro">+$40 + I.V.A.</strong> fijos mensuales al mantenimiento base operativo.</li>
                             </ul>
                         </div>
                         <div class="bg-panel p-4 rounded-lg border border-white/5">
@@ -1089,7 +1089,7 @@
                                 Si los desarrollos futuros de la empresa (Fases 2, 3, etc.) requieren un modelo de licenciamiento o venta independiente (ej. comercialización por usuarios finales, negocios externos, u otros ecosistemas), se aplicará una nueva variable de escalamiento.
                             </p>
                             <p class="mt-2 text-emerald_pro">
-                                Ej: <strong class="text-emerald_pro">+$30 USD + I.V.A. por cada bloque de 5 nuevos usuarios/nodos</strong>. Esta métrica se adaptará y quedará establecida en la cotización de cada proyecto según su naturaleza y consumo de recursos.
+                                Ej: <strong class="text-emerald_pro">+$30 + I.V.A. por cada bloque de 5 nuevos usuarios/nodos</strong>. Esta métrica se adaptará y quedará establecida en la cotización de cada proyecto según su naturaleza y consumo de recursos.
                             </p>
                         </div>
                     </div>
@@ -1102,7 +1102,11 @@
                 <i class="fa-solid fa-boxes-packing text-emerald_pro text-2xl mb-4 opacity-80 relative z-10"></i>
                 <h3 class="text-sm font-bold text-white mb-2 uppercase tracking-wide relative z-10">11. Tarifas de Despliegue de Entornos (Setup Fee)</h3>
                 
-                <div class="grid md:grid-cols-2 gap-4 text-[11px] leading-relaxed text-slate-400 relative z-10 mt-3">
+                <p class="text-[11px] text-slate-400 leading-relaxed relative z-10 mt-3 mb-4">
+                    La interconexión y configuración técnica de cualquier nueva instancia o entorno clínico independiente devengará una tarifa fija de <strong class="text-emerald_pro">$250</strong>, pagadera por adelantado y no reembolsable.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-4 text-[11px] leading-relaxed text-slate-400 relative z-10">
                     <div class="bg-panel p-4 rounded-lg border border-white/5">
                         <strong class="text-white block mb-2 border-b border-white/5 pb-1">Clonación de Repositorios (GitHub):</strong>
                         <p>
@@ -1122,7 +1126,7 @@
     </section>
 
     <!-- FOOTER CORPORATIVO ÉPICO -->
-    <footer class="mt-12 relative border-t border-white/5 pt-12 pb-16 text-center max-w-7xl mx-auto px-6 overflow-hidden">
+    <footer class="mt-12 relative border-t border-white/5 pt-12 pb-6 text-center max-w-7xl mx-auto px-6 overflow-hidden">
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-emerald_pro/50 to-transparent"></div>
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-24 bg-appex/10 blur-[50px] pointer-events-none"></div>
 
