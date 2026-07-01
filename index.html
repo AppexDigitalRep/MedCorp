@@ -93,31 +93,53 @@
         <div class="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-emerald_pro/5 rounded-full blur-[150px]"></div>
     </div>
 
-    <!-- NAVEGACIÓN OPTIMIZADA CON 10 APARTADOS (SCROLL SPY) -->
-    <nav class="fixed w-full z-40 bg-dark/90 backdrop-blur-md border-b border-appex/10 top-0">
+    <!-- NAVEGACIÓN OPTIMIZADA (SCROLL SPY) + MOBILE MENU -->
+    <nav class="fixed w-full z-50 bg-dark/95 backdrop-blur-md border-b border-appex/10 top-0">
         <div class="max-w-[90rem] mx-auto px-4 lg:px-6 h-16 flex items-center justify-between">
             <div class="flex items-center gap-3 shrink-0">
                 <i class="fa-solid fa-microchip text-emerald_pro text-xl"></i>
                 <span class="font-display font-black text-sm lg:text-base tracking-widest text-white">APPEX <span class="text-emerald_pro font-light">DIGITAL</span></span>
             </div>
-            <!-- Menú UltradDenso y Escalable -->
-            <div class="hidden lg:flex items-center gap-3 xl:gap-4 text-[8px] xl:text-[9px] font-bold uppercase tracking-widest text-slate-400" id="nav-menu">
+            
+            <!-- Menú UltradDenso (Desktop) -->
+            <div class="hidden lg:flex items-center gap-3 xl:gap-4 text-[8px] xl:text-[9px] font-bold uppercase tracking-widest text-slate-400" id="nav-menu-desktop">
                 <a href="#producto-core" data-nav-group="app" class="nav-link hover:text-emerald_pro transition-colors">App Base</a>
                 <a href="#cerebro-central" data-nav-group="cerebro" class="nav-link hover:text-emerald_pro transition-colors">Cerebro</a>
                 <a href="#presupuesto-tech" data-nav-group="presupuesto" class="nav-link hover:text-emerald_pro transition-colors">Presupuesto</a>
+                <a href="#sitios-web" data-nav-group="sitios" class="nav-link hover:text-emerald_pro transition-colors">Sitios Web</a>
                 <a href="#motor-contable" data-nav-group="contable" class="nav-link hover:text-emerald_pro transition-colors">Motor Contable</a>
                 <a href="#modelo-negocio" data-nav-group="negocio" class="nav-link hover:text-emerald_pro transition-colors">Negocio</a>
                 <a href="#soberania-financiera" data-nav-group="infraestructura" class="nav-link hover:text-emerald_pro transition-colors">Infraestructura</a>
                 <a href="#plan-tranquilidad" data-nav-group="tranquilidad" class="nav-link hover:text-emerald_pro transition-colors">Plan VIP</a>
                 <a href="#tarifario" data-nav-group="tarifario" class="nav-link hover:text-emerald_pro transition-colors">Tarifario</a>
-                <a href="#roadmap" data-nav-group="futuro" class="nav-link hover:text-emerald_pro transition-colors">Futuro</a>
                 <a href="#apartado-legal" data-nav-group="legal" class="nav-link hover:text-emerald_pro transition-colors">Legal</a>
+            </div>
+
+            <!-- Botón Menú Hamburguesa (Móvil) -->
+            <button id="mobile-menu-btn" class="lg:hidden text-emerald_pro text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Dropdown Menú Móvil -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-dark border-b border-appex/10 absolute w-full left-0 top-16 shadow-2xl">
+            <div class="flex flex-col px-6 py-4 space-y-4 text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                <a href="#producto-core" class="mobile-nav-link hover:text-emerald_pro transition-colors">App Base</a>
+                <a href="#cerebro-central" class="mobile-nav-link hover:text-emerald_pro transition-colors">Cerebro Central</a>
+                <a href="#presupuesto-tech" class="mobile-nav-link hover:text-emerald_pro transition-colors">Presupuesto</a>
+                <a href="#sitios-web" class="mobile-nav-link hover:text-emerald_pro transition-colors">Sitios Web Clínicos</a>
+                <a href="#motor-contable" class="mobile-nav-link hover:text-emerald_pro transition-colors">Motor Contable</a>
+                <a href="#modelo-negocio" class="mobile-nav-link hover:text-emerald_pro transition-colors">Modelo de Negocio</a>
+                <a href="#soberania-financiera" class="mobile-nav-link hover:text-emerald_pro transition-colors">Infraestructura Fiduciaria</a>
+                <a href="#plan-tranquilidad" class="mobile-nav-link hover:text-emerald_pro transition-colors">Plan VIP (Soporte)</a>
+                <a href="#tarifario" class="mobile-nav-link hover:text-emerald_pro transition-colors">Tarifario</a>
+                <a href="#apartado-legal" class="mobile-nav-link hover:text-emerald_pro transition-colors">Apartado Legal</a>
             </div>
         </div>
     </nav>
 
     <!-- HEADER DE AUTORIDAD -->
-    <header class="pt-28 pb-12 px-6 relative overflow-hidden">
+    <header class="pt-32 pb-12 px-6 relative overflow-hidden">
         <div class="max-w-4xl mx-auto text-center relative z-10">
             <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-appex/30 bg-appex/10 mb-4">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald_pro animate-pulse"></span>
@@ -132,45 +154,146 @@
         </div>
     </header>
 
-    <!-- 1. EL PRODUCTO CORE (MEDCORE FASE 1) -->
-    <section id="producto-core" data-menu-group="app" class="py-12 px-6 max-w-7xl mx-auto border-t border-white/5 scroll-mt-20">
-        <div class="mb-8 text-center">
+    <!-- 1. EL PRODUCTO CORE (EXPANDIDO - DETALLE PROFUNDO) -->
+    <section id="producto-core" data-menu-group="app" class="py-12 px-6 max-w-5xl mx-auto border-t border-white/5 scroll-mt-20">
+        <div class="mb-12 text-center">
             <span class="text-emerald_pro text-[10px] font-bold uppercase tracking-[0.3em] block mb-1">FASE 1: TRACCIÓN INMEDIATA</span>
-            <h2 class="text-2xl font-display font-black text-white uppercase tracking-wider">La Aplicación Médica Inteligente</h2>
-            <p class="text-slate-400 text-xs mt-2 max-w-2xl mx-auto">El producto principal que su empresa saldrá a vender a los médicos. Una solución integral "Multi-Inquilino" que moderniza la gestión clínica mediante Inteligencia Artificial.</p>
+            <h2 class="text-2xl md:text-3xl font-display font-black text-white uppercase tracking-wider">El Ecosistema Clínico Integral</h2>
+            <p class="text-slate-400 text-xs md:text-sm mt-3 max-w-3xl mx-auto leading-relaxed">Hemos diseñado un Sistema Operativo Clínico de Nivel Enterprise. Este núcleo se compone de 4 ejes fundamentales que resuelven absolutamente todos los flujos de un consultorio moderno, integrando IA conversacional con código determinista de alta fiabilidad.</p>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            <div class="glass-card p-6 border-t-2 border-emerald_pro hover:-translate-y-1 transition-transform">
-                <div class="w-8 h-8 rounded-lg bg-emerald_pro/10 flex items-center justify-center text-emerald_pro mb-3 text-sm"><i class="fa-solid fa-stethoscope"></i></div>
-                <h3 class="text-sm font-bold text-white mb-1 uppercase tracking-wide">Consola Médica Total</h3>
-                <p class="text-slate-400 text-[11px] leading-relaxed">Control absoluto de expedientes clínicos digitalizados, historiales médicos y evolución del paciente en una interfaz diseñada para velocidad.</p>
+        <div class="flex flex-col gap-8">
+            <!-- EJE 1: Recepción e Interacción Paciente -->
+            <div class="glass-card p-8 md:p-10 border-t-4 border-emerald_pro relative overflow-hidden">
+                <div class="absolute -right-20 -top-20 w-64 h-64 bg-emerald_pro/5 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="flex items-center gap-4 mb-6 relative z-10 border-b border-white/10 pb-4">
+                    <div class="w-14 h-14 rounded-xl bg-emerald_pro/10 flex items-center justify-center text-emerald_pro text-2xl shadow-[0_0_15px_rgba(12,229,165,0.2)]"><i class="fa-solid fa-robot"></i></div>
+                    <div>
+                        <span class="text-[10px] font-mono text-emerald_pro uppercase tracking-widest font-bold block mb-1">Eje Operativo 01</span>
+                        <h3 class="text-xl md:text-2xl font-bold text-white uppercase tracking-wide">Recepción e Interacción Paciente</h3>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 relative z-10">
+                    <div>
+                        <p class="text-slate-300 text-xs leading-relaxed mb-4">El objetivo de este eje es erradicar el trabajo manual, creando un embudo de entrada automatizado para pacientes nuevos y un canal de retención directa para pacientes recurrentes.</p>
+                        <ul class="space-y-4 text-xs text-slate-400">
+                            <li>
+                                <strong class="text-white block mb-1"><i class="fa-brands fa-whatsapp text-emerald_pro mr-1"></i> Recepción IA Externa (WhatsApp)</strong>
+                                Canal principal para <strong class="text-emerald_pro font-medium">pacientes nuevos</strong>. El usuario escribe al WhatsApp de la clínica, la IA interpreta su lenguaje natural, extrae la intención y genera la agenda. El paciente agenda su cita al instante sin necesidad de navegar una web o descargar una aplicación previa.
+                            </li>
+                            <li>
+                                <strong class="text-white block mb-1"><i class="fa-solid fa-plug text-emerald_pro mr-1"></i> API Web Integrable (Ready)</strong>
+                                El "Cerebro Central" queda dotado con los webhooks necesarios para conectar este mismo Agente IA a cualquier sitio web. <br>
+                                <div class="mt-2 p-2.5 bg-emerald_pro/10 border border-emerald_pro/20 rounded-md text-[10px] text-emerald_pro leading-tight">
+                                    <strong>*Opcional:</strong> Si el médico desea además la construcción de su propia página web corporativa, podemos desarrollarla como un Add-on (Ver sección "Sitios Web Clínicos").
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4 text-xs text-slate-400">
+                        <li>
+                            <strong class="text-white block mb-1"><i class="fa-solid fa-mobile-screen text-emerald_pro mr-1"></i> App Satélite de Fidelización</strong>
+                            Una vez que el paciente asiste a consulta e ingresa al ecosistema, se le invita a descargar la interfaz móvil de la clínica. Desde ahí gestiona citas futuras, descarga resultados de laboratorio y recibe notificaciones push automatizadas para el control y toma de sus medicamentos.
+                        </li>
+                        <li>
+                            <strong class="text-white block mb-1"><i class="fa-solid fa-clipboard-list text-emerald_pro mr-1"></i> Módulo de Triage Digital</strong>
+                            Formularios asíncronos inteligentes. El sistema envía automáticamente un enlace al celular del paciente 24 horas antes de su cita para recopilar antecedentes médicos y alergias. Cuando entra al consultorio, el médico encuentra su ficha precargada.
+                        </li>
+                    </div>
+                </div>
             </div>
-            <div class="glass-card p-6 border-t-2 border-emerald_pro hover:-translate-y-1 transition-transform">
-                <div class="w-8 h-8 rounded-lg bg-emerald_pro/10 flex items-center justify-center text-emerald_pro mb-3 text-sm"><i class="fa-solid fa-mobile-screen"></i></div>
-                <h3 class="text-sm font-bold text-white mb-1 uppercase tracking-wide">App Satélite Paciente</h3>
-                <p class="text-slate-400 text-[11px] leading-relaxed">El paciente accede desde su celular para ver sus tratamientos, descargar exámenes y agendar citas, creando fidelidad directa con la clínica.</p>
+
+            <!-- EJE 2: El Motor Clínico y Visual -->
+            <div class="glass-card p-8 md:p-10 border-t-4 border-appex relative overflow-hidden">
+                <div class="absolute -left-20 -bottom-20 w-64 h-64 bg-appex/5 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="flex items-center gap-4 mb-6 relative z-10 border-b border-white/10 pb-4">
+                    <div class="w-14 h-14 rounded-xl bg-appex/10 flex items-center justify-center text-appex text-2xl shadow-[0_0_15px_rgba(4,167,119,0.2)]"><i class="fa-solid fa-stethoscope"></i></div>
+                    <div>
+                        <span class="text-[10px] font-mono text-appex uppercase tracking-widest font-bold block mb-1">Eje Operativo 02</span>
+                        <h3 class="text-xl md:text-2xl font-bold text-white uppercase tracking-wide">El Motor Clínico y Visual</h3>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 relative z-10">
+                    <div class="space-y-4 text-xs text-slate-400">
+                        <li>
+                            <strong class="text-white block mb-1"><i class="fa-solid fa-person-dots-from-line text-appex mr-1"></i> Expediente Visual Anatómico (2D/SVG)</strong>
+                            Revolucionamos la captura de datos. En lugar de campos de texto infinitos, el médico cuenta con modelos interactivos del cuerpo humano según su especialidad. Un clic en una zona específica (ej. articulación del hombro) despliega menús contextuales para registrar dolores, lesiones o tratamientos, acelerando la consulta radicalmente.
+                        </li>
+                        <li>
+                            <strong class="text-white block mb-1"><i class="fa-solid fa-notes-medical text-appex mr-1"></i> Historial Evolutivo Dinámico (Formato SOAP)</strong>
+                            Registro estandarizado (Subjetivo, Objetivo, Análisis, Plan) con soporte para plantillas personalizables. Un pediatra no requiere los mismos campos que un dermatólogo; el sistema adapta la interfaz a la especialidad del usuario.
+                        </li>
+                    </div>
+                    <div class="space-y-4 text-xs text-slate-400 flex flex-col justify-center">
+                        <li>
+                            <strong class="text-white block mb-1"><i class="fa-solid fa-file-prescription text-appex mr-1"></i> Recetario y Planes Inteligentes</strong>
+                            Motor de generación de prescripciones en un par de clics. Vincula medicamentos de un vademécum interno, establece posologías y genera documentos PDF firmados digitalmente que se envían por correo y aparecen instantáneamente en la App del paciente. También permite asignar planes de dieta o ejercicios pre-cargados.
+                        </li>
+                    </div>
+                </div>
             </div>
-            <div class="glass-card p-6 border-t-2 border-emerald_pro hover:-translate-y-1 transition-transform">
-                <div class="w-8 h-8 rounded-lg bg-emerald_pro/10 flex items-center justify-center text-emerald_pro mb-3 text-sm"><i class="fa-solid fa-brain"></i></div>
-                <h3 class="text-sm font-bold text-white mb-1 uppercase tracking-wide">Visor Inteligente (IA)</h3>
-                <p class="text-slate-400 text-[11px] leading-relaxed">Análisis óptico avanzado (OCR) de PDFs e imágenes. Permite interrogar el documento y orquestar tareas basadas en el contexto del paciente.</p>
+
+            <!-- EJE 3: Back-Office y Operativa -->
+            <div class="glass-card p-8 md:p-10 border-t-4 border-emerald_pro relative overflow-hidden">
+                <div class="absolute -right-20 -top-20 w-64 h-64 bg-emerald_pro/5 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="flex items-center gap-4 mb-6 relative z-10 border-b border-white/10 pb-4">
+                    <div class="w-14 h-14 rounded-xl bg-emerald_pro/10 flex items-center justify-center text-emerald_pro text-2xl shadow-[0_0_15px_rgba(12,229,165,0.2)]"><i class="fa-solid fa-boxes-stacked"></i></div>
+                    <div>
+                        <span class="text-[10px] font-mono text-emerald_pro uppercase tracking-widest font-bold block mb-1">Eje Operativo 03</span>
+                        <h3 class="text-xl md:text-2xl font-bold text-white uppercase tracking-wide">Back-Office, Inventarios y Caja</h3>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 relative z-10">
+                    <div class="space-y-4 text-xs text-slate-400">
+                        <p class="text-slate-300 leading-relaxed mb-2">Un consultorio es una empresa. Este eje maneja la logística invisible pero crítica que las simples "apps visuales" suelen ignorar.</p>
+                        <li>
+                            <strong class="text-white block mb-1"><i class="fa-solid fa-warehouse text-emerald_pro mr-1"></i> Gestor de Inventarios Multi-Bodega</strong>
+                            Control estricto con dos lógicas: <br>1. Insumos Internos (ej. gasas, anestesia) que se descuentan automáticamente del stock al registrar un procedimiento en la ficha.<br>2. Productos de Venta (ej. cremas dermatológicas) gestionados directamente en el módulo de caja.
+                        </li>
+                    </div>
+                    <div class="space-y-4 text-xs text-slate-400">
+                        <li>
+                            <strong class="text-white block mb-1"><i class="fa-solid fa-bell-exclamation text-emerald_pro mr-1"></i> Trazabilidad y Caducidad</strong>
+                            El dashboard administrativo alerta proactivamente sobre lotes de medicamentos o insumos próximos a expirar, protegiendo al médico de responsabilidades legales por uso de materiales vencidos.
+                        </li>
+                        <li>
+                            <strong class="text-white block mb-1"><i class="fa-solid fa-cash-register text-emerald_pro mr-1"></i> Caja Clínica y Liquidación (POS)</strong>
+                            Terminal de Punto de Venta integrado. Permite registrar cobros en efectivo/tarjeta, generar reportes de liquidación de turnos (Cierres de Caja) y visualizar reportes de "Cuentas por Cobrar" de pacientes. <strong class="text-emerald_pro font-bold">Diseñado para conectarse nativamente al SaaS Contable.</strong>
+                        </li>
+                    </div>
+                </div>
             </div>
-            <div class="glass-card p-6 border-t-2 border-emerald_pro hover:-translate-y-1 transition-transform">
-                <div class="w-8 h-8 rounded-lg bg-emerald_pro/10 flex items-center justify-center text-emerald_pro mb-3 text-sm"><i class="fa-solid fa-pills"></i></div>
-                <h3 class="text-sm font-bold text-white mb-1 uppercase tracking-wide">Recetas y Tratamientos</h3>
-                <p class="text-slate-400 text-[11px] leading-relaxed">Asignación de esquemas de medicamentos y dietas en un par de clics. Se conecta directo con la app del paciente para recordatorios de dosis.</p>
+
+            <!-- EJE 4: Red de Crecimiento y Multimedia -->
+            <div class="glass-card p-8 md:p-10 border-t-4 border-emerald_pro relative overflow-hidden">
+                <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-emerald_pro/5 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="flex items-center gap-4 mb-6 relative z-10 border-b border-white/10 pb-4">
+                    <div class="w-14 h-14 rounded-xl bg-emerald_pro/10 flex items-center justify-center text-emerald_pro text-2xl shadow-[0_0_15px_rgba(12,229,165,0.2)]"><i class="fa-solid fa-network-wired"></i></div>
+                    <div>
+                        <span class="text-[10px] font-mono text-emerald_pro uppercase tracking-widest font-bold block mb-1">Eje Operativo 04</span>
+                        <h3 class="text-xl md:text-2xl font-bold text-white uppercase tracking-wide">Red de Crecimiento y Multimedia</h3>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 relative z-10">
+                    <div class="space-y-4 text-xs text-slate-400">
+                        <li>
+                            <strong class="text-white block mb-1"><i class="fa-solid fa-share-nodes text-emerald_pro mr-1"></i> Sistema de Referencias (Network Effect)</strong>
+                            El arma secreta para la retención comercial. Médicos generales pueden referir un paciente a un especialista de la red MedCore con un solo clic. El sistema transfiere un resumen encriptado del expediente clínico, fomentando que los médicos inviten a colegas a unirse a la plataforma.
+                        </li>
+                    </div>
+                    <div class="space-y-4 text-xs text-slate-400">
+                        <li>
+                            <strong class="text-white block mb-1"><i class="fa-solid fa-cloud-arrow-up text-emerald_pro mr-1"></i> Bóveda Multimedia (Cloudflare R2)</strong>
+                            Almacenamiento hermético y segmentado. Permite subir y visualizar radiografías, resultados de laboratorio físicos (PDFs) y fotografías de seguimiento evolutivo vinculadas permanentemente al paciente.
+                        </li>
+                        <li>
+                            <strong class="text-white block mb-1"><i class="fa-solid fa-eye text-emerald_pro mr-1"></i> Visor Inteligente OCR (IA Documental)</strong>
+                            Integración con modelos de lectura óptica. Permite interrogar PDFs de exámenes externos cargados al expediente, extrayendo valores específicos sin digitación manual.
+                        </li>
+                    </div>
+                </div>
             </div>
-            <div class="glass-card p-6 border-t-2 border-emerald_pro hover:-translate-y-1 transition-transform">
-                <div class="w-8 h-8 rounded-lg bg-emerald_pro/10 flex items-center justify-center text-emerald_pro mb-3 text-sm"><i class="fa-solid fa-regular fa-calendar-check"></i></div>
-                <h3 class="text-sm font-bold text-white mb-1 uppercase tracking-wide">Agendas Predictivas</h3>
-                <p class="text-slate-400 text-[11px] leading-relaxed">Calendario inteligente que organiza las citas del día, bloquea espacios automáticamente y calcula los tiempos de atención requeridos.</p>
-            </div>
-            <div class="glass-card p-6 border-t-2 border-emerald_pro hover:-translate-y-1 transition-transform">
-                <div class="w-8 h-8 rounded-lg bg-emerald_pro/10 flex items-center justify-center text-emerald_pro mb-3 text-sm"><i class="fa-solid fa-chart-pie"></i></div>
-                <h3 class="text-sm font-bold text-white mb-1 uppercase tracking-wide">Dashboards de Clínica</h3>
-                <p class="text-slate-400 text-[11px] leading-relaxed">Métricas en tiempo real sobre el volumen de pacientes, ingresos proyectados y efectividad de tratamientos para la administración.</p>
-            </div>
+
         </div>
     </section>
 
@@ -207,55 +330,82 @@
         <div class="mb-6 text-center">
             <span class="text-emerald_pro text-[10px] font-bold uppercase tracking-[0.3em] block mb-1">VALORACIÓN DE INGENIERÍA</span>
             <h2 class="text-2xl font-display font-black text-white uppercase tracking-wider">Presupuesto Tecnológico Fase 1</h2>
-            <p class="text-slate-400 text-xs mt-2">Costo de desarrollo del ecosistema base (MedCore + Cerebro Central + Integración IA).</p>
+            <p class="text-slate-400 text-xs mt-2">Costo de desarrollo del ecosistema integral (MedCore + Cerebro Central + Integración IA + Inventarios & Red).</p>
         </div>
 
         <div class="glass-card p-8 bg-panel flex flex-col justify-center h-full border border-appex/20 relative overflow-hidden text-center">
             <div class="absolute -right-20 -top-20 w-48 h-48 bg-appex/10 rounded-full blur-3xl pointer-events-none"></div>
             
             <p class="text-slate-300 text-xs md:text-sm leading-relaxed mx-auto max-w-xl mb-6 relative z-10">
-                Desarrollar esta aplicación desde cero, con arquitectura "Multi-Inquilino" de grado empresarial, agentes de Inteligencia Artificial integrados y el Cerebro Central, tiene un costo real de mercado de:
+                Desarrollar esta aplicación Nivel Enterprise desde cero, con arquitectura "Multi-Inquilino", los 4 módulos operativos complejos descritos y el Cerebro Central, tiene un costo real de mercado de:
             </p>
 
-            <div class="mb-8 max-w-xl mx-auto relative z-10 text-left">
-                <div class="glass-card p-6 border border-white/10 shadow-2xl">
-                    <h3 class="text-white font-bold text-xs uppercase tracking-wider mb-4 flex items-center gap-2 border-b border-white/10 pb-3">
-                        <i class="fa-solid fa-list-check text-emerald_pro"></i> Desglose de Ingeniería Core
-                    </h3>
-                    <div class="space-y-3 font-mono text-[11px] md:text-xs">
-                        <div class="flex items-center justify-between group">
-                            <span class="text-slate-300 group-hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-layer-group text-appex opacity-60"></i> Estructura Multi-Inquilino (Frontend)</span>
-                            <span class="text-white font-bold bg-dark px-2 py-1 rounded border border-white/5">$1,500</span>
-                        </div>
-                        <div class="flex items-center justify-between group">
-                            <span class="text-slate-300 group-hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-server text-appex opacity-60"></i> Cerebro Central & Base de Datos</span>
-                            <span class="text-white font-bold bg-dark px-2 py-1 rounded border border-white/5">$1,800</span>
-                        </div>
-                        <div class="flex items-center justify-between group">
-                            <span class="text-slate-300 group-hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-mobile-screen text-appex opacity-60"></i> App Satélite Paciente (Móvil)</span>
-                            <span class="text-white font-bold bg-dark px-2 py-1 rounded border border-white/5">$1,200</span>
-                        </div>
-                        <div class="flex items-center justify-between group">
-                            <span class="text-slate-300 group-hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-brain text-appex opacity-60"></i> Agentes IA (OCR y Agendas)</span>
-                            <span class="text-white font-bold bg-dark px-2 py-1 rounded border border-white/5">$700</span>
-                        </div>
-                        <div class="flex items-center justify-between group">
-                            <span class="text-slate-300 group-hover:text-white transition-colors flex items-center gap-2"><i class="fa-solid fa-shield-halved text-appex opacity-60"></i> Seguridad Médica y Permisos de Rol</span>
-                            <span class="text-white font-bold bg-dark px-2 py-1 rounded border border-white/5">$400</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
             <div class="relative z-10 mb-6 pb-6 border-b border-white/10">
-                <span class="text-3xl md:text-4xl font-display font-black text-crimson decoration-2 line-through opacity-80 drop-shadow-[0_0_10px_rgba(239,68,68,0.4)]">$5,600 USD</span>
+                <!-- PRECIO DE MERCADO $7,500 -->
+                <span class="text-3xl md:text-4xl font-display font-black text-crimson decoration-2 line-through opacity-80 drop-shadow-[0_0_10px_rgba(239,68,68,0.4)]">$7,500 USD</span>
                 <span class="block mt-1 text-[9px] text-slate-500 uppercase tracking-widest font-mono">Costo Real Agencia Tecnológica</span>
             </div>
 
-            <div class="relative z-10 p-5 bg-appex/10 border border-appex/30 rounded-2xl shadow-[0_0_20px_rgba(4,167,119,0.15)] inline-block mx-auto min-w-[250px]">
+            <!-- PRECIO DE ALIANZA $3,750 -->
+            <div class="relative z-10 p-5 bg-appex/10 border border-appex/30 rounded-2xl shadow-[0_0_20px_rgba(4,167,119,0.15)] inline-block mx-auto min-w-[280px]">
                 <span class="block text-[10px] text-emerald_pro uppercase font-bold tracking-[0.2em] mb-1">Acuerdo Alianza Appex (-50%)</span>
-                <!-- PULSE ON 2800 -->
-                <span class="text-4xl md:text-5xl font-display font-black text-white pulse-green">$2,800 <span class="text-xl text-emerald_pro font-light">USD</span></span>
+                <span class="text-4xl md:text-5xl font-display font-black text-white pulse-green">$3,750 <span class="text-xl text-emerald_pro font-light">USD</span></span>
+                <span class="block text-[9px] text-slate-400 uppercase tracking-widest mt-2">Exento I.V.A. (Fase 1)</span>
+            </div>
+
+            <!-- ESTRUCTURA DE PAGOS -->
+            <div class="mt-8 text-left max-w-lg mx-auto bg-dark p-5 rounded-xl border border-white/5 relative z-10">
+                <h4 class="text-white font-bold text-[10px] uppercase tracking-wider border-b border-white/10 pb-2 mb-3">Estructura de Pago Protegida:</h4>
+                <div class="space-y-3 font-mono text-[10px] text-slate-400">
+                    <div class="flex justify-between items-center gap-4">
+                        <span class="text-emerald_pro font-bold w-24">50% Anticipo</span>
+                        <span class="flex-1"><strong class="text-white">$1,875 USD.</strong> Al firmar y asignar servidores, iniciando reloj de ingeniería.</span>
+                    </div>
+                    <div class="flex justify-between items-center gap-4 border-t border-white/5 pt-2">
+                        <span class="text-emerald_pro font-bold w-24">50% Producción</span>
+                        <span class="flex-1"><strong class="text-white">$1,875 USD.</strong> Contra entrega, pruebas superadas y despliegue al 100%.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3.5 NUEVO: SITIOS WEB CLÍNICOS (ADD-ON) -->
+    <section id="sitios-web" data-menu-group="sitios" class="py-12 px-6 max-w-5xl mx-auto border-t border-white/5 scroll-mt-20">
+        <div class="mb-10 text-center">
+            <span class="text-appex text-[10px] font-bold uppercase tracking-[0.3em] block mb-1">EXPANSIÓN PERIFÉRICA DE MARCA</span>
+            <h2 class="text-2xl font-display font-black text-white uppercase tracking-wider">Sitios Web Clínicos (Add-on Opcional)</h2>
+            <p class="text-slate-400 text-xs mt-2 max-w-3xl mx-auto leading-relaxed">Si bien MedCore gestiona la entrada por WhatsApp automáticamente, si un médico desea tener su propia página web corporativa (Landing Page), MedCorp puede ofrecérselo como un activo adicional de venta.</p>
+        </div>
+
+        <div class="glass-card p-8 border border-appex/30 bg-panel shadow-[0_0_30px_rgba(4,167,119,0.05)] relative overflow-hidden flex flex-col md:flex-row gap-8 items-center">
+            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(4,167,119,0.1)_0,transparent_70%)] pointer-events-none"></div>
+            
+            <div class="flex-1 relative z-10">
+                <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-laptop-code text-appex"></i> Mínimo Viable Web (Clínica)
+                </h3>
+                <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+                    Diseño a la medida de una página de aterrizaje (Landing Page) optimizada para conversión, lista para ser el rostro público del médico y conectarse a la IA.
+                </p>
+                <ul class="space-y-2 text-[11px] text-slate-300 font-medium mb-4">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald_pro"></i> Diseño One-Page (Inicio, Servicios, Acerca de, Contacto).</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald_pro"></i> Integración nativa con el Agente IA de Citas de MedCore.</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald_pro"></i> Optimizado para visualización móvil y SEO básico.</li>
+                </ul>
+            </div>
+            
+            <div class="md:w-1/3 bg-dark border border-white/10 p-5 rounded-xl text-center relative z-10 flex flex-col justify-center">
+                <span class="block text-[9px] text-slate-400 uppercase tracking-widest font-bold mb-2">Costo B2B (Appex a MedCorp)</span>
+                <div class="text-3xl font-display font-black text-emerald_pro mb-1">~$600 <span class="text-sm font-sans font-light text-slate-500">USD</span></div>
+                <span class="block text-[8px] text-slate-500 uppercase tracking-widest">+ I.V.A. (Precio Base Aprox. según requerimientos)</span>
+                
+                <div class="mt-4 p-2 bg-emerald_pro/10 rounded border border-emerald_pro/20 text-[9px] text-emerald_pro">
+                    <strong>Su Margen:</strong> MedCorp puede revender esta web al médico en $900 - $1,200 USD según el mercado.
+                </div>
+                <div class="mt-3 text-[10px] text-slate-400 leading-relaxed border-t border-white/10 pt-3">
+                    Incluye un fee de mantenimiento y hosting asociado de <strong class="text-emerald_pro font-bold">$15 a $20 USD/mes</strong> según la complejidad técnica del sitio.
+                </div>
             </div>
         </div>
     </section>
@@ -266,7 +416,7 @@
             <div class="mb-10 text-center">
                 <span class="text-emerald_pro text-[10px] font-bold uppercase tracking-[0.3em] block mb-1">INFRAESTRUCTURA FIDUCIARIA</span>
                 <h2 class="text-2xl font-display font-black text-white uppercase tracking-wider">El Motor Contable Appex Digital</h2>
-                <p class="text-slate-400 text-xs mt-2 max-w-2xl mx-auto">La aplicación médica es solo la interfaz. Para que su empresa sea un negocio automatizado, se requiere un procesador financiero de nivel bancario operando en el fondo.</p>
+                <p class="text-slate-400 text-xs mt-2 max-w-2xl mx-auto">La aplicación médica es solo la interfaz. Para que su empresa sea un negocio automatizado y escalable, se requiere un procesador financiero de nivel bancario operando en el fondo.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
@@ -391,7 +541,7 @@
         </div>
     </section>
 
-    <!-- 5. EL MODELO DE NEGOCIO B2B2B Y SIMULADOR -->
+    <!-- 5. EL MODELO DE NEGOCIO B2B2B -->
     <section id="modelo-negocio" data-menu-group="negocio" class="py-12 px-6 border-t border-white/5 relative overflow-hidden scroll-mt-20">
         <div class="absolute inset-0 bg-gradient-to-b from-appex/5 to-transparent pointer-events-none z-0"></div>
         <div class="max-w-5xl mx-auto relative z-10">
@@ -399,7 +549,7 @@
                 <span class="text-emerald_pro text-[10px] font-bold uppercase tracking-[0.3em] block mb-1">EL MECANISMO DE GANANCIA B2B2B</span>
                 <h2 class="text-2xl font-display font-black text-white uppercase tracking-wider">¿Cómo ganan dinero ustedes?</h2>
                 <p class="text-slate-300 text-xs mt-2 max-w-2xl mx-auto leading-relaxed">
-                    Vender una aplicación médica vacía es difícil. Pero, ¿qué pasa si le venden al médico una aplicación que <strong class="text-emerald_pro">ya incluye la facturación electrónica de Hacienda</strong>? El valor percibido se dispara.
+                    Vender una aplicación médica vacía es difícil. Pero, ¿qué pasa si le venden al médico una plataforma integral que <strong class="text-emerald_pro">ya le resuelve la facturación electrónica de Hacienda</strong>? El valor percibido y su margen de ganancia se disparan.
                 </p>
             </div>
 
@@ -414,7 +564,7 @@
                             <div class="text-2xl font-black text-white">$60 USD/mes</div>
                             <span class="text-[9px] text-slate-400 font-mono mt-1">+ I.V.A.</span>
                         </div>
-                        <p class="text-[10px] text-slate-400 mt-2 leading-relaxed">El médico paga esta suscripción por la app MedCore + Sistema de Hacienda.</p>
+                        <p class="text-[10px] text-slate-400 mt-2 leading-relaxed">El médico asume esta suscripción para activar Hacienda en su App MedCore.</p>
                     </div>
                     <div class="p-3 flex flex-col items-center">
                         <div class="w-10 h-10 rounded-full bg-crimson/10 flex items-center justify-center text-crimson mb-3"><i class="fa-solid fa-server text-sm"></i></div>
@@ -423,7 +573,7 @@
                             <div class="text-2xl font-black text-crimson">-$35 USD/mes</div>
                             <span class="text-[9px] text-slate-400 font-mono mt-1">+ I.V.A.</span>
                         </div>
-                        <p class="text-[10px] text-slate-400 mt-2 leading-relaxed">Costo que nos pagan por infraestructura y timbrado XML.</p>
+                        <p class="text-[10px] text-slate-400 mt-2 leading-relaxed">Costo de Licencia Base que nos pagan por infraestructura y timbrado XML.</p>
                     </div>
                     <div class="p-3 flex flex-col items-center relative">
                         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(12,229,165,0.15)_0,transparent_70%)] pointer-events-none rounded-xl"></div>
@@ -434,65 +584,138 @@
                             <div class="text-2xl font-black text-emerald_pro pulse-green">+$25 USD/mes</div>
                             <span class="text-[9px] text-emerald_pro/70 font-mono mt-1">+ I.V.A.</span>
                         </div>
-                        <p class="text-[10px] text-slate-300 mt-2 leading-relaxed font-medium relative z-10">Utilidad neta y recurrente directo al bolsillo de su empresa.</p>
+                        <p class="text-[10px] text-slate-300 mt-2 leading-relaxed font-medium relative z-10">Utilidad neta y recurrente directo al bolsillo de su empresa por cada Plus activo.</p>
                     </div>
-                </div>
-            </div>
-
-            <!-- Simulador -->
-            <div class="mb-6 text-center">
-                <h3 class="text-xl font-display font-black text-white uppercase tracking-wider">Simulador de Flujo de Caja</h3>
-                <p class="text-slate-400 text-xs mt-1">Proyecte sus ingresos ajustando precio y cantidad de clínicas.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-6 items-stretch bg-cardBg rounded-2xl p-6 border border-white/10 shadow-2xl">
-                <!-- Controles -->
-                <div class="space-y-6 flex flex-col justify-center">
-                    <div class="space-y-2">
-                        <div class="flex justify-between items-center text-xs font-bold">
-                            <span class="text-white uppercase tracking-wide">Precio de Venta (Su App)</span>
-                            <span class="text-emerald_pro bg-emerald_pro/10 px-2 py-0.5 rounded font-mono" id="display-precio-base">$200 USD</span>
-                        </div>
-                        <input type="range" id="precio-base-input" min="50" max="500" step="10" value="200" class="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-emerald_pro">
-                    </div>
-
-                    <div class="p-3 bg-dark rounded-xl border border-white/5 flex items-center justify-between">
-                        <div>
-                            <span class="text-xs font-bold text-white uppercase tracking-wide block mb-0.5">Activar "Plus Contable"</span>
-                            <p class="text-[9px] text-slate-400 max-w-[180px]">Su cliente paga $60 más, ganan $25 extra.</p>
-                        </div>
-                        <div class="relative inline-block w-10 mr-1 align-middle select-none">
-                            <input type="checkbox" name="toggle" id="toggle-contable" class="toggle-checkbox absolute block w-5 h-5 rounded-full bg-white border-4 border-slate-600 appearance-none cursor-pointer z-10 transition-all duration-300" checked/>
-                            <label for="toggle-contable" class="toggle-label block overflow-hidden h-5 rounded-full bg-slate-600 cursor-pointer transition-colors duration-300"></label>
-                        </div>
-                    </div>
-
-                    <div class="space-y-2 pt-3 border-t border-white/5">
-                        <div class="flex justify-between items-center text-xs font-bold">
-                            <span class="text-white uppercase tracking-wide">Clientes / Médicos</span>
-                            <span class="text-emerald_pro bg-emerald_pro/10 px-2 py-0.5 rounded font-mono" id="display-medicos">50</span>
-                        </div>
-                        <input type="range" id="medicos-input" min="1" max="100" value="50" class="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-emerald_pro">
-                    </div>
-                </div>
-
-                <!-- Resultados HUD -->
-                <div class="p-6 bg-dark rounded-xl border border-appex/20 text-center flex flex-col justify-center relative overflow-hidden shadow-[inset_0_0_30px_rgba(0,0,0,0.8)]">
-                    <div class="absolute inset-0 bg-gradient-to-b from-emerald_pro/5 to-transparent pointer-events-none"></div>
-                    <span class="text-[10px] text-slate-400 uppercase font-bold tracking-widest block mb-1 relative z-10">Ingreso Mensual Proyectado</span>
-                    <div class="text-4xl font-display font-black text-white mb-5 relative z-10" id="mensual-total">$11,250</div>
-                    
-                    <div class="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent my-4 relative z-10"></div>
-                    
-                    <span class="text-[10px] text-emerald_pro uppercase font-bold tracking-widest block mb-1 relative z-10">Flujo de Caja Anual (Libre)</span>
-                    <div class="text-5xl font-display font-black text-emerald_pro mb-2 relative z-10 drop-shadow-[0_0_10px_rgba(12,229,165,0.3)]" id="anual-total">$135,000</div>
-                    <span class="text-[9px] text-slate-500 font-mono uppercase tracking-wider relative z-10">USD Recurrentes Netos para Su Empresa</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5.5 SOBERANÍA FINANCIERA (TILOPAY VS BAC) -->
+    <!-- 5.5 ESTRATEGIA DE LICENCIAMIENTO B2B2C (3 PLANES) -->
+    <section id="licenciamiento-b2b2c" data-menu-group="negocio" class="py-12 px-6 max-w-7xl mx-auto border-t border-white/5 scroll-mt-20">
+        <div class="mb-10 text-center">
+            <span class="text-emerald_pro text-[10px] font-bold uppercase tracking-[0.3em] block mb-1">APLICANDO EL PLUS CONTABLE</span>
+            <h2 class="text-2xl font-display font-black text-white uppercase tracking-wider">Estrategia de Licenciamiento Sugerida</h2>
+            <p class="text-slate-400 text-xs mt-2 max-w-2xl mx-auto leading-relaxed">
+                Al contar con una arquitectura híbrida y modular (Software Clínico + Ecosistema Contable + Sitios Web), MedCorp tiene la capacidad de ofrecer tres planes escalonados, maximizando la adopción inicial y las utilidades netas a largo plazo con el gremio médico.
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-6">
+            <!-- Plan Basico -->
+            <div class="glass-card p-6 lg:p-8 border border-white/10 bg-dark hover:border-emerald_pro/30 transition-colors flex flex-col justify-between">
+                <div>
+                    <h3 class="text-lg font-bold text-slate-300 uppercase tracking-wide mb-1">Plan MedCore Básico</h3>
+                    <p class="text-[11px] text-slate-400 mb-6 italic">Solo gestión operativa y clínica. Ideal para entrada rápida sin facturación.</p>
+                    <div class="text-3xl lg:text-4xl font-display font-black text-white mb-6">$179 <span class="text-xs lg:text-sm font-sans font-normal text-slate-500">USD/mes</span></div>
+                    <ul class="space-y-3 text-[10px] lg:text-[11px] text-slate-300 font-medium">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald_pro mt-0.5"></i> <span>Módulo de IA Conversacional (WhatsApp) y App Satélite para Pacientes.</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald_pro mt-0.5"></i> <span>Expediente Clínico Visual (Modelos 2D) y Recetario Inteligente.</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald_pro mt-0.5"></i> <span>Control de Inventarios, Caja Local y Red de Referencias.</span></li>
+                        <li class="flex items-start gap-2 text-slate-600"><i class="fa-solid fa-xmark mt-0.5"></i> <span><del>Facturación Electrónica (Hacienda CR) y SaaS Contable.</del></span></li>
+                    </ul>
+                </div>
+                <div class="mt-8 pt-4 border-t border-white/5 text-[10px] text-slate-400 text-center font-mono">
+                    Utilidad 100% libre para MedCorp.
+                </div>
+            </div>
+
+            <!-- Plan Pro (Destacado) -->
+            <div class="glass-card p-6 lg:p-8 border border-emerald_pro/50 bg-panel shadow-[0_0_30px_rgba(4,167,119,0.15)] relative overflow-hidden flex flex-col justify-between transform lg:-translate-y-2">
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(12,229,165,0.05)_0,transparent_70%)] pointer-events-none"></div>
+                <div class="absolute top-4 right-4 bg-emerald_pro text-dark font-bold text-[9px] uppercase tracking-widest px-3 py-1 rounded">Más Vendido</div>
+                
+                <div class="relative z-10">
+                    <h3 class="text-lg font-bold text-emerald_pro uppercase tracking-wide mb-1">Plan Ecosistema Pro</h3>
+                    <p class="text-[11px] text-slate-300 mb-6 italic">Resuelve la clínica y la carga fiscal en un solo lugar 100% automatizado.</p>
+                    <div class="text-3xl lg:text-4xl font-display font-black text-white mb-6">$299 <span class="text-xs lg:text-sm font-sans font-normal text-slate-500">USD/mes</span></div>
+                    <ul class="space-y-3 text-[10px] lg:text-[11px] text-white font-medium">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald_pro mt-0.5"></i> <span>Todo el poder operativo del Plan MedCore Básico.</span></li>
+                        <li class="flex items-start gap-2 font-bold"><i class="fa-solid fa-check text-appex mt-0.5"></i> <span>Facturación Hacienda CR (API 4.4) sin software de terceros.</span></li>
+                        <li class="flex items-start gap-2 font-bold"><i class="fa-solid fa-check text-appex mt-0.5"></i> <span>Pasarela de Pagos B2B (Tilopay/BAC) Integrada al Expediente.</span></li>
+                        <li class="flex items-start gap-2 font-bold"><i class="fa-solid fa-check text-appex mt-0.5"></i> <span>Conexión SaaS Contable Appex en Tiempo Real (Libros y Balances).</span></li>
+                    </ul>
+                </div>
+                <div class="mt-6 p-3 bg-emerald_pro/10 rounded-lg border border-emerald_pro/20 text-[9px] text-slate-300 text-center leading-relaxed relative z-10 font-medium">
+                    <strong class="text-emerald_pro block mb-1">Cálculo Fiduciario Appex:</strong> 
+                    Appex retiene su licencia ($35). MedCorp percibe la utilidad excedente íntegra (+$264 netos/mes por clínica).
+                </div>
+            </div>
+
+            <!-- Plan Pro Business (Nuevo) -->
+            <div class="glass-card p-6 lg:p-8 border border-white/10 bg-dark hover:border-emerald_pro/30 transition-colors flex flex-col justify-between">
+                <div>
+                    <h3 class="text-lg font-bold text-slate-300 uppercase tracking-wide mb-1">Plan Pro Business</h3>
+                    <p class="text-[11px] text-slate-400 mb-6 italic">Software Total + Presencia Digital. El paquete corporativo definitivo.</p>
+                    <div class="text-3xl lg:text-4xl font-display font-black text-white mb-6">$349 - $399 <span class="text-xs lg:text-sm font-sans font-normal text-slate-500">USD/mes</span></div>
+                    <ul class="space-y-3 text-[10px] lg:text-[11px] text-slate-300 font-medium">
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald_pro mt-0.5"></i> <span>Incluye todo el "Plan Ecosistema Pro" (Operativa + Hacienda CR).</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald_pro mt-0.5"></i> <span><strong class="text-white">Sitio Web a la Medida:</strong> Diseño One-Page premium para la clínica.</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald_pro mt-0.5"></i> <span><strong class="text-white">Hosting VIP:</strong> Mantenimiento, SSL y gestión de dominio mensual cubierta.</span></li>
+                        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald_pro mt-0.5"></i> <span>Integración nativa del Agente IA Conversacional en el sitio web.</span></li>
+                    </ul>
+                </div>
+                <div class="mt-8 pt-4 border-t border-white/5 text-[10px] text-slate-400 text-center font-mono leading-relaxed">
+                    Requiere <strong class="text-emerald_pro">Setup Web Inicial</strong> (~$900-$1,200 USD cobrados por MedCorp al médico). Cuota Appex retenida: $35 (SaaS) + $15 (Hosting Web) = $50 USD.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5.75 SIMULADOR DE FLUJOS -->
+    <section id="simulador" data-menu-group="negocio" class="py-12 px-6 max-w-5xl mx-auto border-t border-white/5 relative scroll-mt-20">
+        <div class="mb-6 text-center">
+            <h3 class="text-xl font-display font-black text-white uppercase tracking-wider">Simulador de Flujo de Caja</h3>
+            <p class="text-slate-400 text-xs mt-1">Proyecte sus ingresos ajustando su precio base y activando el Plan Pro.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 items-stretch bg-cardBg rounded-2xl p-6 border border-white/10 shadow-2xl">
+            <!-- Controles -->
+            <div class="space-y-6 flex flex-col justify-center">
+                <div class="space-y-2">
+                    <div class="flex justify-between items-center text-xs font-bold">
+                        <span class="text-white uppercase tracking-wide">Precio Mensual (Por Médico)</span>
+                        <span class="text-emerald_pro bg-emerald_pro/10 px-2 py-0.5 rounded font-mono" id="display-precio-base">$299 USD</span>
+                    </div>
+                    <input type="range" id="precio-base-input" min="50" max="500" step="1" value="299" class="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-emerald_pro">
+                </div>
+
+                <div class="p-3 bg-dark rounded-xl border border-white/5 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-white uppercase tracking-wide block mb-0.5" id="toggle-label-text">Vender en "Plan Pro"</span>
+                        <p class="text-[9px] text-slate-400 max-w-[200px]" id="toggle-desc-text">El médico factura. A su precio de venta se le restan los $35 de Appex.</p>
+                    </div>
+                    <div class="relative inline-block w-10 mr-1 align-middle select-none shrink-0">
+                        <input type="checkbox" name="toggle" id="toggle-contable" class="toggle-checkbox absolute block w-5 h-5 rounded-full bg-white border-4 border-slate-600 appearance-none cursor-pointer z-10 transition-all duration-300" checked/>
+                        <label for="toggle-contable" class="toggle-label block overflow-hidden h-5 rounded-full bg-slate-600 cursor-pointer transition-colors duration-300"></label>
+                    </div>
+                </div>
+
+                <div class="space-y-2 pt-3 border-t border-white/5">
+                    <div class="flex justify-between items-center text-xs font-bold">
+                        <span class="text-white uppercase tracking-wide">Clientes / Médicos Activos</span>
+                        <span class="text-emerald_pro bg-emerald_pro/10 px-2 py-0.5 rounded font-mono" id="display-medicos">50</span>
+                    </div>
+                    <input type="range" id="medicos-input" min="1" max="100" value="50" class="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-emerald_pro">
+                </div>
+            </div>
+
+            <!-- Resultados HUD -->
+            <div class="p-6 bg-dark rounded-xl border border-appex/20 text-center flex flex-col justify-center relative overflow-hidden shadow-[inset_0_0_30px_rgba(0,0,0,0.8)]">
+                <div class="absolute inset-0 bg-gradient-to-b from-emerald_pro/5 to-transparent pointer-events-none"></div>
+                <span class="text-[10px] text-slate-400 uppercase font-bold tracking-widest block mb-1 relative z-10">Ingreso Mensual Proyectado</span>
+                <div class="text-4xl font-display font-black text-white mb-5 relative z-10" id="mensual-total">$13,200</div>
+                
+                <div class="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent my-4 relative z-10"></div>
+                
+                <span class="text-[10px] text-emerald_pro uppercase font-bold tracking-widest block mb-1 relative z-10">Flujo de Caja Anual (Libre)</span>
+                <div class="text-5xl font-display font-black text-emerald_pro mb-2 relative z-10 drop-shadow-[0_0_10px_rgba(12,229,165,0.3)]" id="anual-total">$158,400</div>
+                <span class="text-[9px] text-slate-500 font-mono uppercase tracking-wider relative z-10">USD Recurrentes Netos para MedCorp</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. SOBERANÍA FINANCIERA (TILOPAY VS BAC) -->
     <section id="soberania-financiera" data-menu-group="infraestructura" class="py-12 px-6 bg-dark border-t border-white/5 relative scroll-mt-20">
         <div class="max-w-5xl mx-auto">
             <div class="mb-10 text-center">
@@ -553,7 +776,7 @@
         </div>
     </section>
 
-    <!-- 6. SOBERANÍA DE INFRAESTRUCTURA ($5) -->
+    <!-- 7. SOBERANÍA DE INFRAESTRUCTURA ($5) -->
     <section id="infraestructura" data-menu-group="infraestructura" class="py-12 px-6 max-w-6xl mx-auto border-t border-white/5 scroll-mt-20">
         <div class="mb-10 text-center">
             <span class="text-crimson text-[10px] font-bold uppercase tracking-[0.3em] block mb-1">CORTAFUEGOS LEGAL Y OPERATIVO</span>
@@ -611,7 +834,7 @@
         </div>
     </section>
 
-    <!-- 6.25 CIBERSEGURIDAD PERIMETRAL (CLOUDFLARE PRO) -->
+    <!-- 7.25 CIBERSEGURIDAD PERIMETRAL (CLOUDFLARE PRO) -->
     <section id="ciberseguridad" data-menu-group="infraestructura" class="py-12 px-6 max-w-6xl mx-auto border-t border-white/5 scroll-mt-20">
         <div class="mb-10 text-center">
             <span class="text-emerald_pro text-[10px] font-bold uppercase tracking-[0.3em] block mb-1">PROTECCIÓN DE DATOS SENSIBLES</span>
@@ -633,7 +856,7 @@
         </div>
     </section>
 
-    <!-- 6.5 RECOMENDACIONES & TIENDAS (DESPLIEGUE MÓVIL) -->
+    <!-- 7.5 RECOMENDACIONES & TIENDAS (DESPLIEGUE MÓVIL) -->
     <section id="tiendas-despliegue" data-menu-group="infraestructura" class="py-12 px-6 max-w-7xl mx-auto border-t border-white/5 scroll-mt-20">
         <div class="mb-10 text-center">
             <span class="text-appex text-[10px] font-bold uppercase tracking-[0.3em] block mb-1">IDENTIDAD CORPORATIVA Y MÓVIL</span>
@@ -696,7 +919,7 @@
         </div>
     </section>
 
-    <!-- 7. EL PLAN DE TRANQUILIDAD ESCALABLE -->
+    <!-- 8. EL PLAN DE TRANQUILIDAD ESCALABLE -->
     <section id="plan-tranquilidad" data-menu-group="tranquilidad" class="py-12 px-6 relative border-t border-white/5 scroll-mt-20">
         <div class="max-w-6xl mx-auto">
             <div class="mb-10 text-center">
@@ -804,7 +1027,7 @@
         </div>
     </section>
 
-    <!-- 8. TARIFARIO Y CIERRE -->
+    <!-- 9. TARIFARIO Y CIERRE -->
     <section id="tarifario" data-menu-group="tarifario" class="py-12 px-6 max-w-5xl mx-auto border-t border-white/5 scroll-mt-20">
         <div class="mb-10 text-center">
             <span class="text-emerald_pro text-[10px] font-bold uppercase tracking-[0.3em] block mb-1">TRANSPARENCIA TOTAL</span>
@@ -819,10 +1042,10 @@
                 </h3>
                 <div class="space-y-5 flex-grow">
                     <div>
-                        <span class="text-[10px] text-slate-400 font-mono uppercase block mb-1">Fase 1: App MedCore + Cerebro</span>
-                        <div class="text-xs md:text-sm font-mono text-crimson line-through opacity-80 mb-[-2px]">$5,600 USD</div>
+                        <span class="text-[10px] text-slate-400 font-mono uppercase block mb-1">Fase 1: Ecosistema Clínico + Cerebro</span>
+                        <div class="text-xs md:text-sm font-mono text-crimson line-through opacity-80 mb-[-2px]">$7,500 USD</div>
                         <div class="text-3xl font-display font-black text-emerald_pro flex items-center gap-2">
-                            <i class="fa-solid fa-microchip text-xl opacity-80"></i> $2,800 USD
+                            <i class="fa-solid fa-microchip text-xl opacity-80"></i> $3,750 USD
                         </div>
                         <div class="flex flex-wrap gap-2 items-center mt-1.5">
                             <p class="text-[9px] text-emerald_pro font-mono uppercase tracking-widest font-bold bg-emerald_pro/10 px-2 py-0.5 rounded">Alianza 50% Aplicado</p>
@@ -835,13 +1058,12 @@
                         <ul class="mb-2 space-y-1 text-[9px]">
                             <li>• Arquitectura Multi-Inquilino Core</li>
                             <li>• Cerebro Central de Base de Datos</li>
-                            <li>• App Médica (Frontend UI)</li>
+                            <li>• Los 4 Ejes Clínicos (IA, Expedientes, Inventarios)</li>
                             <li>• App Satélite Paciente (Móvil)</li>
-                            <li>• Integración de IA (OCR / Llama)</li>
                         </ul>
                         <strong class="text-white block mb-0.5">Estructura de Pago:</strong>
-                        • 50% anticipo al iniciar ($1,400).<br>
-                        • 50% al entregar en producción ($1,400).<br>
+                        • 50% anticipo al iniciar ($1,875).<br>
+                        • 50% al entregar en producción ($1,875).<br>
                     </div>
 
                     <!-- Cuentas Tiendas App -->
@@ -856,16 +1078,29 @@
                         </div>
                     </div>
 
-                    <!-- Despliegue Aislado -->
+                    <!-- Despliegue Aislado y Web -->
                     <div class="pt-1">
                         <div class="flex justify-between items-center">
                             <div>
                                 <span class="text-[11px] text-emerald_pro font-bold block mb-0.5">Despliegue de Entorno Aislado</span>
-                                <span class="text-[9px] text-emerald_pro/70 font-mono block">Extracción para Mega-Clínicas</span>
+                                <span class="text-[9px] text-emerald_pro/70 font-mono block">Extracción para Nuevas Clínicas</span>
                             </div>
                             <div class="flex flex-col items-end">
                                 <div class="text-lg font-display font-black text-emerald_pro flex items-center gap-1.5">
                                     <i class="fa-solid fa-microchip text-sm opacity-80"></i> $250
+                                </div>
+                                <span class="text-[8px] font-mono text-slate-400 font-bold">+ 13% I.V.A.</span>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between items-center border-t border-white/5 pt-3 mt-3">
+                            <div>
+                                <span class="text-[11px] text-emerald_pro font-bold block mb-0.5">Desarrollo Sitio Web a la Medida (Opcional)</span>
+                                <span class="text-[9px] text-emerald_pro/70 font-mono block">Precio base aprox. sujeto a requerimientos</span>
+                            </div>
+                            <div class="flex flex-col items-end shrink-0 ml-2">
+                                <div class="text-lg font-display font-black text-emerald_pro flex items-center gap-1.5">
+                                    <i class="fa-solid fa-laptop-code text-sm opacity-80"></i> ~$600
                                 </div>
                                 <span class="text-[8px] font-mono text-slate-400 font-bold">+ 13% I.V.A.</span>
                             </div>
@@ -892,7 +1127,6 @@
                         </div>
                     </div>
                     
-                    <!-- AJUSTE DE COLORIMETRÍA FIDUCIARIA INTJ -->
                     <div class="flex justify-between items-center pb-2 pt-2 border-b border-white/5">
                         <div class="pr-4">
                             <span class="text-xs text-emerald_pro font-bold block">Plan de Tranquilidad VIP</span>
@@ -904,6 +1138,19 @@
                         <div class="flex flex-col items-end shrink-0 ml-2">
                             <div class="text-xl font-display font-black text-emerald_pro pulse-green">$60</div>
                             <span class="text-[8px] font-mono text-slate-400 font-bold whitespace-nowrap">+ 13% I.V.A.</span>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center pb-2 pt-2 border-b border-white/5">
+                        <div class="pr-4">
+                            <span class="text-xs text-emerald_pro font-bold block">Hosting y Mantenimiento Web Clínica</span>
+                            <span class="text-[10px] text-slate-500 font-sans block mt-1 leading-normal italic">
+                                Solo si contratan el sitio web opcional. El precio varía según la complejidad. Facturado directo a MedCorp para mantener la relación comercial.
+                            </span>
+                        </div>
+                        <div class="flex flex-col items-end shrink-0 ml-2">
+                            <div class="text-xl font-display font-black text-emerald_pro pulse-green">~$15-20</div>
+                            <span class="text-[8px] font-mono text-slate-400 font-bold whitespace-nowrap">+ I.V.A./mes</span>
                         </div>
                     </div>
 
@@ -947,7 +1194,7 @@
         </div>
     </section>
 
-    <!-- 9. ROADMAP DE EXPANSIÓN (FASES FUTURAS) -->
+    <!-- 10. ROADMAP DE EXPANSIÓN (FASES FUTURAS) -->
     <section id="roadmap" data-menu-group="futuro" class="py-12 px-6 border-t border-white/5 max-w-7xl mx-auto scroll-mt-20">
         <div class="mb-8 text-center">
             <span class="text-emerald_pro text-[10px] font-bold uppercase tracking-[0.3em] block mb-1">ESCALABILIDAD INFINITA</span>
@@ -960,7 +1207,7 @@
                 <div class="absolute top-0 right-0 w-12 h-12 bg-emerald_pro/10 rounded-bl-full"></div>
                 <span class="text-emerald_pro text-[9px] font-bold uppercase block mb-2">ACTUAL</span>
                 <h4 class="text-white font-bold text-sm mb-1">Fase 1: MedCore</h4>
-                <p class="text-[10px] text-slate-400 leading-relaxed">Aplicación médica base, App Pacientes, y construcción del Cerebro Conector.</p>
+                <p class="text-[10px] text-slate-400 leading-relaxed">Sistema Operativo Clínico + App Paciente.</p>
             </div>
             
             <div class="glass-card p-5 border-t-2 border-white/20 opacity-70 hover:opacity-100 transition-opacity">
@@ -984,7 +1231,7 @@
         <p class="text-center text-[9px] text-slate-500 font-mono mt-6 uppercase tracking-widest">Los costos de Fases 2, 3 y 4 se cotizarán a medida según requerimientos y complejidad.</p>
     </section>
 
-    <!-- 10. APARTADO LEGAL Y SLA -->
+    <!-- 11. APARTADO LEGAL Y SLA -->
     <section id="apartado-legal" data-menu-group="legal" class="py-16 px-6 max-w-6xl mx-auto border-t border-white/5 scroll-mt-20">
         <div class="mb-12 text-center">
             <span class="text-crimson text-xs font-bold uppercase tracking-[0.3em] block mb-2">CORTAFUEGOS CONTRACTUAL</span>
@@ -1047,7 +1294,7 @@
             <div class="glass-card p-6 border-t-2 border-emerald_pro/50 bg-dark hover:border-emerald_pro transition-colors">
                 <i class="fa-solid fa-stopwatch text-emerald_pro text-2xl mb-4 opacity-80"></i>
                 <h3 class="text-sm font-bold text-white mb-2 uppercase tracking-wide">7. SLA de Aceptación (Time-Boxing)</h3>
-                <p class="text-[11px] text-slate-400 leading-relaxed">Notificada la entrega de la Fase 1, el Cliente dispone de <strong class="text-emerald_pro">7 días naturales</strong> para pruebas. Superado este plazo sin reporte de fallos críticos, el sistema se da por <strong class="text-emerald_pro">'Aceptado en Producción'</strong> y el saldo del 50% (<strong class="text-emerald_pro">$1,400</strong>) se vuelve exigible en un máximo de <strong class="text-emerald_pro">48 horas</strong>.</p>
+                <p class="text-[11px] text-slate-400 leading-relaxed">Notificada la entrega de la Fase 1, el Cliente dispone de <strong class="text-emerald_pro">7 días naturales</strong> para pruebas. Superado este plazo sin reporte de fallos críticos, el sistema se da por <strong class="text-emerald_pro">'Aceptado en Producción'</strong> y el saldo del 50% (<strong class="text-emerald_pro">$1,875</strong>) se vuelve exigible en un máximo de <strong class="text-emerald_pro">48 horas</strong>.</p>
             </div>
 
             <!-- 8. Plazo de Entrega -->
@@ -1061,7 +1308,7 @@
             <div class="glass-card p-6 border-t-2 border-crimson/50 bg-dark hover:border-crimson transition-colors relative overflow-hidden">
                 <i class="fa-solid fa-ban text-crimson text-2xl mb-4 opacity-80 relative z-10"></i>
                 <h3 class="text-sm font-bold text-white mb-2 uppercase tracking-wide relative z-10">9. Integridad del Alcance (Scope Creep)</h3>
-                <p class="text-[11px] text-slate-400 leading-relaxed relative z-10">Cualquier alteración, adición de módulos o cambio de flujos no especificados en los 5 pilares de la Fase 1, generará un ticket de <strong class="text-crimson">'Feature Request'</strong> cotizado a <strong class="text-crimson">$45/hora + I.V.A.</strong> de ingeniería, pagadero por anticipado.</p>
+                <p class="text-[11px] text-slate-400 leading-relaxed relative z-10">Cualquier alteración, adición de módulos o cambio de flujos no especificados en los ejes de la Fase 1, generará un ticket de <strong class="text-crimson">'Feature Request'</strong> cotizado a <strong class="text-crimson">$45/hora + I.V.A.</strong> de ingeniería, pagadero por anticipado.</p>
             </div>
 
             <!-- 10. Escalabilidad y Futuros Proyectos -->
@@ -1122,6 +1369,16 @@
                 </div>
             </div>
 
+            <!-- 12. Propiedad Sitios Web -->
+            <div class="glass-card p-6 border-t-2 border-appex/50 bg-dark hover:border-appex transition-colors lg:col-span-3 relative overflow-hidden">
+                <i class="fa-solid fa-globe text-appex text-2xl mb-4 opacity-80 relative z-10"></i>
+                <h3 class="text-sm font-bold text-white mb-2 uppercase tracking-wide relative z-10">12. Propiedad de Sitios Web Periféricos</h3>
+                
+                <p class="text-[11px] text-slate-400 leading-relaxed relative z-10">
+                    Si la clínica contrata el Add-on de desarrollo de sitio web, este activo será propiedad exclusiva del médico/clínica. En el eventual caso de que decidan separarse del ecosistema MedCore, su sitio web seguirá siendo suyo y se mantendrá completamente activo (perdiendo únicamente la integración con el Agente IA de MedCore). <strong class="text-emerald_pro">Sin embargo, la licencia de mantenimiento y hospedaje web (estimada entre $15 y $20 USD/mes según complejidad) seguirá siendo operada exclusivamente por Appex Digital, pero facturada de forma vitalicia a través de MedCorp</strong> para salvaguardar nuestras políticas fiduciarias de no-competencia directa.
+                </p>
+            </div>
+
         </div>
     </section>
 
@@ -1139,6 +1396,21 @@
     </footer>
 
     <script>
+        // MENU MÓVIL SCRIPT
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
         // LÓGICA DE SIMULACIÓN FINANCIERA
         const precioBaseInput = document.getElementById('precio-base-input');
         const medicosInput = document.getElementById('medicos-input');
@@ -1149,6 +1421,9 @@
         const mensualTotal = document.getElementById('mensual-total');
         const anualTotal = document.getElementById('anual-total');
 
+        const toggleLabelText = document.getElementById('toggle-label-text');
+        const toggleDescText = document.getElementById('toggle-desc-text');
+
         function formatCurrency(amount) {
             return '$' + amount.toLocaleString('en-US');
         }
@@ -1156,15 +1431,16 @@
         function updateCalculations() {
             const precioVentaApp = parseInt(precioBaseInput.value, 10);
             const cantidadMedicos = parseInt(medicosInput.value, 10);
-            const incluyePlusContable = toggleContable.checked;
+            const isPlanPro = toggleContable.checked;
 
             displayPrecioBase.innerText = `$${precioVentaApp} USD`;
             displayMedicos.innerText = cantidadMedicos;
 
             let ingresoNetoPorMedico = precioVentaApp; 
             
-            if (incluyePlusContable) {
-                ingresoNetoPorMedico += 25; 
+            if (isPlanPro) {
+                // Al vender el plan pro pagan los $35 a Appex, el resto queda libre.
+                ingresoNetoPorMedico -= 35; 
             }
 
             const ingresoMensualNeto = cantidadMedicos * ingresoNetoPorMedico;
@@ -1176,8 +1452,23 @@
 
         precioBaseInput.addEventListener('input', updateCalculations);
         medicosInput.addEventListener('input', updateCalculations);
-        toggleContable.addEventListener('change', updateCalculations);
+        
+        // Auto-ajuste de slider basado en el toggle
+        toggleContable.addEventListener('change', (e) => {
+            if(e.target.checked) {
+                precioBaseInput.value = 299;
+                toggleLabelText.innerText = 'Vender en "Plan Pro"';
+                toggleDescText.innerText = 'El médico factura. A su precio de venta se le restan los $35 de Appex.';
+            } else {
+                precioBaseInput.value = 179;
+                toggleLabelText.innerText = 'Vender "Plan Básico"';
+                toggleDescText.innerText = 'Sin facturación Hacienda. El 100% de la cuota mensual es utilidad para MedCorp.';
+            }
+            updateCalculations();
+        });
 
+        // Initialize display
+        precioBaseInput.value = 299;
         updateCalculations();
 
         // SCROLL SPY ALGORITHM (TELEMETRÍA UI)
